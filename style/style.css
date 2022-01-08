@@ -7,7 +7,7 @@
   --shadow-color: #202020;
   --document-bg-color: #68686850;
   --component-bg-gradient: radial-gradient(circle, #646464e6 0%, #363636e6 100%);
-  --smokywhite: #dddbd8;
+  --smokywhite: #a1a1a1;
   --black: #000000;
   --translucent-black: #00000099;
 }
@@ -100,6 +100,24 @@ body {
 .document::-webkit-scrollbar-thumb {
   /* Safari and Chrome */
   background-color: var(--accent-color);
+}
+.page {
+  padding: 2rem 2rem;
+}
+.close {
+  width: 30px;
+  height: 30px;
+  color: var(--smokywhite);
+  font-size: 20px;
+  border: 1px solid var(--smokywhite);
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.close:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 .footer {
   padding: 15px 0;
