@@ -11,7 +11,7 @@ export class TaskComponent extends BaseComponent<HTMLElement> {
       '.task__title'
     )! as HTMLHeadingElement;
     const taskElement = this.element.querySelector('.task-checkbox')! as HTMLInputElement;
-
+    taskElement.insertAdjacentText('afterend', task);
     titleElement.textContent = title;
     taskElement.textContent = task;
   }
