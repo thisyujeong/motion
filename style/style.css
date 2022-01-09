@@ -101,12 +101,13 @@ body {
 /* -- Page -- */
 .page-item {
   margin: 1.5em;
-  padding: 0.5em;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   border: 1px solid var(--border-color);
   background: #fff;
+  font-size: 14px;
 }
 
 .page-item .close {
@@ -122,11 +123,38 @@ body {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
-.task {
-  font-size: 14px;
+.page-item__title {
+  margin-bottom: 0.5em;
+  font-size: 20px;
+  font-weight: 400;
 }
-.task-checkbox {
+.page-item input[type='checkbox'] {
   margin-right: 8px;
+}
+.page-item__body {
+  width: 100%;
+}
+
+/* -- Image & Video -- */
+.video,
+.image {
+  display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.video__player,
+.image__holder {
+  width: 100%;
+  display: flex;
+}
+.video__title,
+.image__title {
+  margin-left: 1em;
+}
+.video__iframe,
+.image__thumbnail {
+  width: 50%;
 }
 
 /* -- Dialog -- */
