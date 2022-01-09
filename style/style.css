@@ -108,6 +108,8 @@ body {
   border: 1px solid var(--border-color);
   background: #fff;
   font-size: 14px;
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .page-item .close {
@@ -235,4 +237,18 @@ body {
   font-size: 14px;
   border-top: 1px solid var(--border-color);
   background: var(--bg-main-color);
+}
+
+/* -- Drag and Drop -- */
+.mute-children * {
+  pointer-events: none;
+}
+
+.lifted {
+  opacity: 0.5;
+}
+
+.drop-area {
+  outline: 5px solid var(--accent-color);
+  outline-offset: -5px;
 }
