@@ -4,19 +4,14 @@
   --text-accent-color: #ffe498;
   --text-edit-bg-color: #575757;
   --border-color: #d9dbdd;
-  --shadow-color: #202020;
-  --document-bg-color: #68686850;
-  --component-bg-gradient: radial-gradient(circle, #646464e6 0%, #363636e6 100%);
+  --shadow-color: #a7a7a7;
+  --document-bg-color: #92929250;
   --smokywhite: #a1a1a1;
   --black: #000000;
   --translucent-black: #00000099;
 }
 p {
   color: var(--smokywhite);
-}
-
-label {
-  color: var(--text-accent-color);
 }
 
 * {
@@ -81,6 +76,7 @@ body {
   background-color: var(--accent-color);
   border: none;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .document {
@@ -101,24 +97,110 @@ body {
   /* Safari and Chrome */
   background-color: var(--accent-color);
 }
-.page {
-  padding: 2rem 2rem;
+
+/* -- Page -- */
+.page-item {
+  margin: 1.5em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid var(--border-color);
+  background: #fff;
 }
-.close {
+
+.page-item .close {
   width: 30px;
   height: 30px;
   color: var(--smokywhite);
   font-size: 20px;
-  border: 1px solid var(--smokywhite);
+  border: 0;
   background-color: #fff;
   cursor: pointer;
-  margin-bottom: 40px;
 }
-
-.close:hover {
+.page-item .close:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
+.task {
+  font-size: 14px;
+}
+.task-checkbox {
+  margin-right: 8px;
+}
+
+/* -- Dialog -- */
+.dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  background-color: var(--document-bg-color);
+}
+
+.dialog__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4em;
+  width: 32em;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.dialog button {
+  border: 0;
+  padding: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dialog button:hover {
+  color: var(--accent-color);
+}
+.dialog button:first-child {
+  border-bottom: 1px solid var(--border-color);
+}
+.dialog button:last-child {
+  border-top: 1px solid var(--border-color);
+}
+
+#dialog__body {
+  padding: 24px 0;
+}
+.form__container {
+  display: flex;
+  align-items: center;
+}
+
+.form__container + .form__container {
+  margin-top: 1rem;
+}
+
+.form__container label {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+.form__container input {
+  padding: 0 1rem;
+  width: 80%;
+  line-height: 32px;
+  border: 0;
+  border: 1px solid #dedee0;
+  background: transparent;
+}
+
+/* -- Footer -- */
 .footer {
   padding: 15px 0;
   text-align: center;
